@@ -1,9 +1,5 @@
-const reverseArray = array =>{
-
+const reverseArray = array => {
     if (!Array.isArray(array)) return null;
-    return array.reverse();
+
+    return array.slice().reverse();
 }
-
-const array=["samer", "lagha", "js"]; 
-
-console.log(reverseArray(array));
