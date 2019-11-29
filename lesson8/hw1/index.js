@@ -3,7 +3,6 @@ function pickProps(obj,arr){
         for (const key in obj) {
             if (key === elm) {
                 arr[elm] = obj[key];
-                break;
             }
         }
         return arr;
