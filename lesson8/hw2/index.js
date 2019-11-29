@@ -10,6 +10,6 @@ function  getAdults(obj){
       
     }
     
-    const obj= { 'John Doe': 19, 'Tom': 17, 'Bob': 18 };
+    // const obj= { 'John Doe': 19, 'Tom': 17, 'Bob': 18 };
     
-    console.log(getAdults(obj));
+    // console.log(getAdults(obj));
