@@ -1,4 +1,4 @@
-function copy(mainObj) {
+function copyObj(mainObj) {
     let objCopy = {}; 
     let key;
   
@@ -17,4 +17,4 @@ function copy(mainObj) {
     },
   }
   
-  console.log(copy(mainObj));
+  console.log(copyObj(mainObj));
