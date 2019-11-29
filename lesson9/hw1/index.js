@@ -1,10 +1,10 @@
-function  getCustomersList(customers){
-    let arr = [];
-    for (let key in customers) {
-    arr.push({[key]: customers[key]});
-    return arr;
-    }
-    
+const getCustomersList = obj => {
+        const resultObj = {};
+        for (const key in obj) {
+            resultObj[key] = {...obj[key]}
+            resultObj[key]['id'] = key;
+        }
+        return Object.values(resultObj).sort((elem1, elem2) => elem1.age - elem2.age);
     }
     
      const  customers =  {
@@ -15,8 +15,7 @@ function  getCustomersList(customers){
         'customer-id-2': {
             name: 'Tom',
             age: 17
-        },
-        
+        },  
     }
      
     
