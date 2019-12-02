@@ -8,11 +8,11 @@ const sortContacts =(contacts,boolen) =>{
       .sort((a,b) => {
           if(boolen ===true || boolen ===undefined){
 
-            return a.name.localeCompare(b.name);
+            return b.name.localeCompare(a.name);
           } else {
-         return a.name.localeCompare(b.name);
+         return b.name.localeCompare(a.name);
           }
       
        } ) ;
        return result;
-}
+};
