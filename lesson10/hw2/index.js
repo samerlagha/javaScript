@@ -1,4 +1,4 @@
-function getRandomNumbers(arr,from, to) {
+function gegetRandomNumbers(arr,from, to) {
     const arr = [];
  function getRandomInt(from, to) {
     from = Math.ceil(from);
