@@ -1,5 +1,9 @@
 function getRandomNumbers(arr, from, to) {
     const arry = [];
+
+      if (to < from || (to - from < 1) && Math.ceil(to) === Math.ceil(from)) {
+        return null;
+    }
       function getRandomInt(from, to) {
     fromn = Math.ceil(from);
     to = Math.floor(to);
