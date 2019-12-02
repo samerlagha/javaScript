@@ -8,7 +8,7 @@ const sortContacts =(contacts,boolen) =>{
       .sort((a,b) => {
           if(boolen ===true || boolen ===undefined){
 
-            return b.name.localeCompare(a.name);
+            return a.name.localeCompare(b.name);
           } else {
          return b.name.localeCompare(a.name);
           }
