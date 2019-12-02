@@ -10,7 +10,7 @@ const  getMaxAbsoluteNumber = arr =>{
     // return max ;
 
     const absoluteValues= arr=>{
-        if (!arr.isArray(arr) || arr.length === 0) return null;
+        if (!Array.isArray(arr) || arr.length === 0) return null;
        const tempValue= arr.map(num => Math.abs(num));
       const max= Math.max(...tempValue);
      return max;
