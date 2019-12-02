@@ -18,10 +18,9 @@ if (len === undefined) {
      startPosition += len;
 
      strArr.push(chunk[0].toUpperCase()+ chunk.slice(1));
-     
+
     }
 
      
      return strArr.join('\n');
-   }
-} ;
+   } ;
