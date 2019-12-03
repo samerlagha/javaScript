@@ -1,4 +1,4 @@
-function pickProps(obj,arr){
+export const  pickProps = (obj,arr) => {
     return arr.reduce((arr, elm) => {
         for (const key in obj) {
             if (key === elm) {
@@ -7,7 +7,7 @@ function pickProps(obj,arr){
         }
         return arr;
     }, {});
-}
+};
 
 const arr= ['a', 17.1, 'John Doe'] ;
 const obj= { a: 'a', '17.1': 17.1, 'John Doe': 'John Doe' }
