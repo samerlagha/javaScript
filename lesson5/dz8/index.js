@@ -1,4 +1,4 @@
-function  compareSums(a, b, c, d){
+export const compareSums = (a, b, c, d) =>{
     let sum1= sum(a,b);
       let sum2= sum(d,c);
    let compare = sum1 - sum2;

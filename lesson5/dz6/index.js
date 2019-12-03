@@ -1,6 +1,6 @@
-function getPrimes(num){
-    //let n = 10;
-    
+const  getPrimes = num =>{
+   
+
     nextPrime:
     for (let i = 1; i <= num; i++) { 
     
@@ -10,6 +10,7 @@ function getPrimes(num){
          console.log(i);
     }
     
+  
     }
 
 
