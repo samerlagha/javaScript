@@ -2,7 +2,7 @@ import getMinSquaredNumber from './getMinSquaredNumber';
 
 it('should get squared in minNumber from array',() => {
 
-    const result = getMinSquaredNumber([4,8,-2,77,90,-55]);
+    const result = getMinSquaredNumber([-777, 3, -2, 6, 45, -20]);
     expect(result).toEqual(4);
 });
 
