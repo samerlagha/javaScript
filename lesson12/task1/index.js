@@ -8,7 +8,7 @@ const calc = expression =>{
             break
 
             case '-':
-            rresult= a - b;
+            result = a - b;
             break
 
             case '*':
