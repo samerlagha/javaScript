@@ -1,5 +1,5 @@
 export default array =>{
- if(!Array.isArray(array) || array.length <1) return null;
+ if(!Array.isArray(array) || array.length < 1) return null;
  let minNumber= Math.abs(array[0]);
 
  for(let num of array){
