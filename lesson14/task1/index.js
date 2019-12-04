@@ -1,11 +1,10 @@
-'use strick'
-const message='Just learn it!';
-let sender ='Gromcode';
-export function sendMessage(name) {
-    
-    console.log(`${name}, ${message}. You ${sender}`);
-}
+'use strict';
 
- export  function setMassage(text){
-    message = text;
- }
+let message = "Just learn it!";
+export function sendMessage (name){
+	let sender = "Gromcode";
+	console.log(`${name}, ${message} Your ${sender}`);
+}
+export function setMessage(text){
+	message = text;
+}
