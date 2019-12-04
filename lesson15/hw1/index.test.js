@@ -1,4 +1,4 @@
-import { createCalculator, decrease, reset, getMemo } from './index.js'
+import { createCalculator, decrease, reset, getMemo } from './index.js.js'
 
 it('should add number', () => {
     let calculator = createCalculator();
