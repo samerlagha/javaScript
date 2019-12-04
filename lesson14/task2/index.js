@@ -1,9 +1,10 @@
-const createMessenger = () =>{
+  const  createMessenger = () =>{
 
-    const sender ='Gromcode';
+    let sender ='Gromcode';
+    let message = 'Just learn it!';
     function sendMessage(name){
      
-        console.log(`${name}, ${message}! Your ${sender}`);
+        console.log(`${name}, ${message} Your ${sender}`);
     }
 
     function setMessage(text) {
@@ -18,6 +19,6 @@ const createMessenger = () =>{
         sendMessage,
          setMessage,
          setSender,
-    };
-};
+    }
+}
 
