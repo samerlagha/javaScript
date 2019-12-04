@@ -1,4 +1,4 @@
-  const  createMessenger = () =>{
+  export default  createMessenger = () =>{
 
     let sender ='Gromcode';
     let message = 'Just learn it!';
@@ -19,6 +19,6 @@
         sendMessage,
          setMessage,
          setSender,
-    }
-}
+    };
+};
 
