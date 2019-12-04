@@ -1,4 +1,4 @@
-export default function createMessenger() {
+ function createMessenger() {
     let sender = 'Gromcode';
     let message = 'Just learn it!';
 
