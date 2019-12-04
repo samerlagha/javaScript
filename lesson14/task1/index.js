@@ -1,7 +1,10 @@
+'use strick'
 const message='Just learn it!';
-export const sendMessage =name =>{
+export function sendMessage(name) {
     const sender ='Gromcode';
     console.log(`${name}, ${message}. You ${sender}`);
 }
 
- export const setMassage = text => message = text;
+ export  function setMassage(text){
+    message = text;
+ }
