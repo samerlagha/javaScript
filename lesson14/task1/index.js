@@ -1,7 +1,8 @@
 'use strick'
 const message='Just learn it!';
+let sender ='Gromcode';
 export function sendMessage(name) {
-    const sender ='Gromcode';
+    
     console.log(`${name}, ${message}. You ${sender}`);
 }
 
