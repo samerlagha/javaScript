@@ -9,6 +9,10 @@ for(let i =0 ;i < number;i++){
     arr[i]= function(){
         return i;
     }
+
+    // arr[i] = arr => {
+    //     return i;
+    //   }
 }
 return arr;
 }
