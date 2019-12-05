@@ -1,6 +1,6 @@
-
+ let  timerCount=0,
   export const timer ={
-     timerCount:0,
+    
     secondsPassed: 0,
     minsPassed:0 ,
     startTimer(){
