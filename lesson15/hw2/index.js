@@ -1,46 +1,30 @@
-export function createLogger(){
+export const createLogger = () => {
+    let logger = [];
+    return{
+        warn: (str) => logger.push(
+                    {
+                        message: str,
+                        dateTime:new Date(),
+                        type: "warn",
+                    }),
+        error: (str) => logger.push(
+                    {
+                        message: str,
+                        dateTime:new Date(),
+                        type: "error",
+                    }),
+        log: (str)=> logger.push(
+                    {
+                        message: str,
+                        dateTime:new Date(),
+                        type: "log",
+                    }),
+        getRecords: (type) => !type ? logger
+                .sort((a,b) => a.dateTime > b.dateTime ? 1 : -1)
+                .filter(elem => elem = elem.message) :
+                logger
+                .filter(elem => elem.type === type),
 
-   let logger=[];
-
-   return {
-
-    warn: function (str) {
-
-        logger.push({
-            message: str,
-            dataTime: new Date(),
-            type:'warn',
-
-        });
-    },
-
-    error: function (str) {
-
-        logger.push({
-            message: str,
-            dataTime: new Date(),
-            type:'error',
-
-        });
-    },
-
-        log: function (str) {
-
-            logger.push({
-                message: str,
-                dataTime: new Date(),
-                type:'log'
-            });
-            
-        },
-
-        getRecords: function(str) {
-            if (!str) {
-                return logger;
-            };
-            return logger.filter(i => i.type === str).sort((a, b) => a.dateTime.getTime() - b.dateTime.getTime());
-        }
-    };
-};
-        
+    }
+};   
  
