@@ -1,5 +1,5 @@
  let  timerCount=0,
-  export const timer ={
+   export const timer ={
     
     secondsPassed: 0,
     minsPassed:0 ,
