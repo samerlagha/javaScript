@@ -5,10 +5,10 @@
     minsPassed:0 ,
     startTimer(){
     timerCount = setInterval(() => {
-        this.secondsPassed +=5;
-        if(this.secondsPassed ===60){
+        this.secondsPassed += 5;
+        if (this.secondsPassed === 60) {
             this.minsPassed++;
-            this.secondsPassed=0;
+            this.secondsPassed = 0;
         }
     }, 5000);
     },
