@@ -2,7 +2,7 @@ function test(a, b) {
     return Math.sqrt(a * a + b * b);
 }
 
-function spy(func) {
+ export function spy(func) {
 
 function wrapper(...args) {
     wrapper.calls.push(args);
