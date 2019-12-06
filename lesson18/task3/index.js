@@ -1,7 +1,7 @@
 export const sumOfSquares = function() {
    
-    return [...arguments].reduce((acc,elem)=>{
-        return (acc+elem)*(acc+elem);
+    return [...arguments].map(elem => elem * elem).reduce((acc,elem)=>{
+        return acc+elem;
     },0);
 };
 
