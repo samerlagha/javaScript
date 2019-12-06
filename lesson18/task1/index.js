@@ -1,20 +1,18 @@
- 'use strict'
- export const event ={
-    message:'Welcome to the party!',
-    guests:[
+export const event = {
+    name: 'John',
+    message: 'Welcome to the party!',
+    guests: [{ name: 'John', age: 18, email: 'j@server.com' },
+            { name: 'Bob', age: 26, email: 'b@server.com' },
+            { name: 'Ann', age: 19, email: 'a@server.com' },
+            { name: 'Tom', age: 11, email: 't@server.com' },
+            ],
 
-        { name: 'John',
-          age: 18, 
-          email: 'example@server.com',
+    getInvitations() {
+        return this.guests
+            .filter(({ age }) => age >= 18)
+            .map(({ name, email }) => ({ 
+                email, 
+                message: `Dear ${name}! ${this.message}`,
+            }))
     }
-    ],
-     getInvitations(){
-       return this.guests
-       .filter(({age})=> age >= 18)
-       .map(({name,email}) => ({
-          email:`${email}`,
-           text: `Dear ${name}! ${this.message}`,
-           
-       }));
-     }     
 }
