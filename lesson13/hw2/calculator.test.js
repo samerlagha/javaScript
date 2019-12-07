@@ -17,7 +17,7 @@ it('should get string',() =>{
 
 it('should get string',() =>{
     const result = calc('20 / 5');
-    expect(result).toEqual('20 / 5 = 25');
+    expect(result).toEqual('20 / 5 = 4');
 });
 
 it('should get null',()=>{
