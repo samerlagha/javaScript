@@ -12,15 +12,15 @@ class UserRepository {
     };
 
     getUserNames() {
-        return this._users.map(i => i._name);
+        return this._users.map(el => el._name);
     };
 
     getUserIds() {
-        return this._users.map(i => i._id);
+        return this._users.map(el => el._id);
     };
 
     getUserNameById(userId) {
-        let findById = this._users.find(i => i._id === userId);
+        let findById = this._users.find(el => el._id === userId);
         return findById === undefined ? [] : findById._name;
     };
 };
