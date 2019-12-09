@@ -1,33 +1,28 @@
-class User{
-
-    constructor(id,name,sessionId){
-        this._id=`${id}`;
-        this._name=`${name}`;
+class User {
+    constructor(id, name, sessionId) {
+        this._id = `${id}`;
+        this._name = `${name}`;
         this._sessionId = `${sessionId}`;
-    }
-}
+    };
+};
 
+class UserRepository {
+    constructor(arr) {
+        this._users = Object.freeze(arr);
+    };
 
-  class UserRepository{
+    getUserNames() {
+        return this._users.map(i => i._name);
+    };
 
-    constructor(users){
-        this._users= Object.freeze(users);
-    }
+    getUserIds() {
+        return this._users.map(i => i._id);
+    };
 
-    getUserNames(){
-        return this._users.map(elem => elem => elem._name);
-    }
+    getUserNameById(userId) {
+        let findById = this._users.find(i => i._id === userId);
+        return findById === undefined ? [] : findById._name;
+    };
+};
 
-    getUserIds(){
-        return this._users.map(elem => elem => elem._id);
-    }
-
-    getUserNameById(userId){
-
-    let findById = this._users.find(elem => elem._id ===userId);
-    return findById === undefined ? [] : findById._name;
-
-    }
-}
-
-export{User, UserRepository}
+export { User, UserRepository };
