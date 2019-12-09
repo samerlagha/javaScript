@@ -8,7 +8,7 @@ const vehicle ={
     stop(){
         console.log(`${name} stoped`);
     }
-}
+};
 
 const ship ={
     startMachine(){
@@ -19,5 +19,6 @@ const ship ={
     stopMachine(){
      console.log(`${this.name} lifting anchor down`);
      ship.stop();
-    }
+    },
+    __proto__:vehicle
 }
