@@ -1,5 +1,11 @@
 export const getOwnProps = obj =>{
-        obj =  Object.keys(obj);
-        return obj;
-    // console.log(Object.keys(arr));
+       const arrOwnProps=[];
+       for(let prop in obj){
+
+        if(obj.hasOwnProprety(prop) && typeof obj[prop!=='function'){
+            arrOwnProps.push(prop);
+        }
+       }
+
+       return arrOwnProps;
 }
