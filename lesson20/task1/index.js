@@ -21,7 +21,11 @@ setAge(age) {
     return age;
 }
 static creatEmpty(){
-    return new User(' ',null);
+    // return new User('',null);
+    return{
+    name: '',
+    age: null,
+    }
 }
 
 }
