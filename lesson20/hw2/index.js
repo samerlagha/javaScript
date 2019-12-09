@@ -17,8 +17,12 @@ class User {
 }
 
 class UserRepository {
-    constructor(arr) {
-        this._users = Object.freeze(arr);
+    constructor(users) {
+        this._users = Object.freeze(users);
+    }
+
+    get users(){
+        return this._users;
     }
 
     getUserNames() {
