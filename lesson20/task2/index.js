@@ -30,5 +30,3 @@ class Ship extends Vehicle {
 };
 
 export { Vehicle, Ship }
-
-export { vehicle, ship }
