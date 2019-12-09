@@ -4,6 +4,16 @@ class User {
         this._name = name;
         this._sessionId = sessionId;
     }
+
+    get id(){
+        return this._id;
+    }
+    get name(){
+        return this._name;
+    }
+    get sessionId(){
+        return this._sessionId;
+    }
 }
 
 class UserRepository {
