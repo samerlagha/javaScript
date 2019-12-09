@@ -13,12 +13,12 @@
  export const ship ={
     startMachine(){
         console.log(`${this.name}  lifting anchor up`);
-        ship.move();
+        this.move();
     },
 
     stopMachine(){
      console.log(`${this.name} lifting anchor down`);
-     ship.stop();
+     this.stop();
     },
     __proto__:vehicle
 }
