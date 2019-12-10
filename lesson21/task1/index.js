@@ -7,7 +7,6 @@ const todos = [
 ];
 
 
-
 const renderListItems = listItems => {
   const listElem = document.querySelector('.list');
 
