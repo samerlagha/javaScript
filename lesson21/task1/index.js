@@ -11,7 +11,9 @@ const todos = [
 const renderListItems = listItems => {
   const listElem = document.querySelector('.list');
 
-  const listItemsElems = listItems.map(({ text, done }) => {
+  const listItemsElems = listItems
+  .sort((a,b) => a.done - b.done)
+  .map(({ text, done }) => {
 
       const listItemElem = document.createElement('li');
       listItemElem.classList.add('list__item');
