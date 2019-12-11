@@ -1,11 +1,3 @@
-// const todos = [
-//     { text: 'Buy milk', done: false,id :0 ,date: new Date(2019, 4, 1) },
-//     { text: 'Pick up Tom from airport', done: false,id:1,date: new Date(2019, 5, 1) },
-//     { text: 'Visit party', done: false ,id:2,date: new Date(2019, 6, 1,)},
-//     { text: 'Visit doctor', done: true,id:3 ,date: new Date(2019, 7, 1,)},
-//     { text: 'Buy meat', done: true ,id:4,date: new Date(2018, 1, 1,)},
-//   ];
-
 const todos = [
   { text: 'Buy milk', done: false,id :0 ,date: new Date() },
   { text: 'Pick up Tom from airport', done: false,id:1,date: new Date() },
