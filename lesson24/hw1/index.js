@@ -1,8 +1,10 @@
-const secondPerMinute= 60 ;
-const secondPerHour= 60 * secPerMinute;
-const secondPerDay = 24 * secPerHour;
+// Try edit message
 
-  export const getDiff = (startDate, endDate) =>{
+const secondPerMinute= 60 ;
+const secondPerHour= 60 * secondPerMinute;
+const secondPerDay = 24 * secondPerHour;
+
+ const getDiff = (startDate, endDate) =>{
 
    let DiffTime = startDate - endDate;
 
@@ -16,7 +18,7 @@ const secondPerDay = 24 * secPerHour;
 
    let secondInLastHour = secondInLastDay - hour * secondPerHour;
 
-   let minut = (parseInt(secInLastHour / secondPerMinute));
+   let minut = (parseInt(secondInLastHour / secondPerMinute));
    let sec = secondInLastHour - minut * secondPerMinute;
    return `${Math.abs(days)}d ${Math.abs(hour)}h ${Math.abs(minut)}m ${Math.abs(sec)}s`
    
