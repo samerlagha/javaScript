@@ -25,8 +25,10 @@ const todos = [
 
   
     const listItemsElems = listItems
+   
+    .sort((a,b) => b.done - a.done)
     .sort((a,b) => b.date -a.date)
-    .sort((a,b) => a.done - b.done)
+  
     .map(({ text, done,id }) => {
   
         const listItemElem = document.createElement('li');
