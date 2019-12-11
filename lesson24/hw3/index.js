@@ -1,9 +1,13 @@
 const todos = [
-  { text: 'Buy milk', done: false,id :0 ,date: new Date() },
-  { text: 'Pick up Tom from airport', done: false,id:1,date: new Date() },
-  { text: 'Visit party', done: false ,id:2,date: new Date()},
-  { text: 'Visit doctor', done: true,id:3 ,date: new Date()},
-  { text: 'Buy meat', done: true ,id:4,date: new Date()},
+  { text: 'Buy milk', done: false,id :0 ,date: new Date() ,dateComplet:undefined},
+
+  { text: 'Pick up Tom from airport', done: false,id:1,date: new Date(),dateComplet:undefined },
+
+  { text: 'Visit party', done: false ,id:2,date: new Date(),dateComplet:undefined},
+
+  { text: 'Visit doctor', done: true,id:3 ,date: new Date(),dateComplet:undefined},
+
+  { text: 'Buy meat', done: true ,id:4,date: new Date(),dateComplet:undefined},
 ];
 
 
@@ -20,7 +24,7 @@ const todos = [
    
     .sort((a,b) => b.done - a.done)
     .sort((a,b) => b.date -a.date)
-  
+    .sort((a, b) => b.dateСompleted - a.dateСompleted)
     .map(({ text, done,id }) => {
   
         const listItemElem = document.createElement('li');
