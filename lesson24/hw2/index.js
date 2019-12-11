@@ -1,6 +1,6 @@
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-const studentsBirthDays = students =>{
+ export const studentsBirthDays = students =>{
  
    let birthDays ={};
    students.sort((a,b) => new Date(a.birthDate).getDate()- new Date(b.birthDate).getDate() )
