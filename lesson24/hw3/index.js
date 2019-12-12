@@ -22,7 +22,7 @@ const todos = [
   
     const listItemsElems = listItems
    
-        .sort((a, b) => b.date - a.date)
+        .sort((a, b) => a.date - b.date)
         .sort((a, b) => b.done - a.done)
        .sort((a, b) => b.dateСompleted - a.dateСompleted)
        .map(({ text, done,id }) => {
