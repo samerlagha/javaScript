@@ -11,60 +11,60 @@ const todos = [
 ];
 
 
-//   const listElem = document.querySelector('.list');
-//   const btnElem = document.querySelector('.btn');
-//   const inputElem = document.querySelector('.task-input');
+  const listElem = document.querySelector('.list');
+  const btnElem = document.querySelector('.btn');
+  const inputElem = document.querySelector('.task-input');
   
   
-//   const renderListItems = listItems => {
-//     const listElem = document.querySelector('.list');
+  const renderListItems = listItems => {
+    const listElem = document.querySelector('.list');
 
   
-//     const listItemsElems = listItems
+    const listItemsElems = listItems
    
-//         .sort((a, b) => a.date - b.date)
-//         .sort((a, b) => b.done - a.done)
-//        .sort((a, b) => b.dateСompleted - a.dateСompleted)
-//        .map(({ text, done,id }) => {
+        .sort((a, b) => a.date - b.date)
+        .sort((a, b) => b.done - a.done)
+       .sort((a, b) => b.dateСompleted - a.dateСompleted)
+       .map(({ text, done,id }) => {
   
-//         const listItemElem = document.createElement('li');
-//         listItemElem.classList.add('list__item');
-//         listItemElem.setAttribute('id',`${id}`);
+        const listItemElem = document.createElement('li');
+        listItemElem.classList.add('list__item');
+        listItemElem.setAttribute('id',`${id}`);
   
-//         const checkboxItem = document.createElement('input');
-//         checkboxItem.setAttribute('type', 'checkbox')
-//         checkboxItem.checked = done;
-//         if (done) {
-//             listItemElem.classList.add('list__item_done');
-//         }
-//         checkboxItem.classList.add('list__item-checkbox');
+        const checkboxItem = document.createElement('input');
+        checkboxItem.setAttribute('type', 'checkbox')
+        checkboxItem.checked = done;
+        if (done) {
+            listItemElem.classList.add('list__item_done');
+        }
+        checkboxItem.classList.add('list__item-checkbox');
   
   
-//         listItemElem.append(checkboxItem, text);
+        listItemElem.append(checkboxItem, text);
   
-//         return listItemElem;
-//     });
+        return listItemElem;
+    });
   
-//     listElem.append(...listItemsElems);
-//   };
+    listElem.append(...listItemsElems);
+  };
   
-//   renderListItems(todos);
+  renderListItems(todos);
 
 
-//   const checkDoneToDo= (event)=>{ 
+  const checkDoneToDo= (event)=>{ 
 
-// const checkTarget = event.target;
-// if(checkTarget.tagName != 'INPUT') return;
+const checkTarget = event.target;
+if(checkTarget.tagName != 'INPUT') return;
 
-// const getId  = todos.find(elem => elem.id === +checkTarget.parentElement.id);
-// getId.done = checkTarget.checked;
+const getId  = todos.find(elem => elem.id === +checkTarget.parentElement.id);
+getId.done = checkTarget.checked;
 
-// listElem.innerHTML ='';
-// renderListItems(todos);
+listElem.innerHTML ='';
+renderListItems(todos);
 
-//   };
+  };
 
-//   listElem.addEventListener('click',checkDoneToDo);
+  listElem.addEventListener('click',checkDoneToDo);
 
 const createNewToDo= () =>{
   if(inputElem.value =='') return;
