@@ -19,7 +19,10 @@ const calc = initValue =>{
      div(number){
          result /=number;
          return this;
-     }
+     },
+     result(){
+         return result;
+     },
 
     };
 
