@@ -1,16 +1,16 @@
-const todos = [
-  { text: 'Buy milk', done: false,id :0 ,date: new Date(2019,9,1) ,dateComplet:new Date()},
+// const todos = [
+//   { text: 'Buy milk', done: false,id :0 ,date: new Date(2019,9,1) ,dateComplet:new Date()},
 
-  { text: 'Pick up Tom from airport', done: false,id:1,date: new Date(2019,4,1),dateComplet:new Date()},
+//   { text: 'Pick up Tom from airport', done: false,id:1,date: new Date(2019,4,1),dateComplet:new Date()},
 
-  { text: 'Visit party', done: false ,id:2,date: new Date(2019,9,5),dateComplet:new Date()},
+//   { text: 'Visit party', done: false ,id:2,date: new Date(2019,9,5),dateComplet:new Date()},
 
-  { text: 'Visit doctor', done: true,id:3 ,date: new Date(2019,9,9),dateComplet:new Date()},
+//   { text: 'Visit doctor', done: true,id:3 ,date: new Date(2019,9,9),dateComplet:new Date()},
 
-  { text: 'Buy meat', done: true ,id:4,date: new Date(2019,9,3),dateComplet:new Date()},
-];
+//   { text: 'Buy meat', done: true ,id:4,date: new Date(2019,9,3),dateComplet:new Date()},
+// ];
 
-
+ const todos =[];
   const listElem = document.querySelector('.list');
   const btnElem = document.querySelector('.btn');
   const inputElem = document.querySelector('.task-input');

@@ -1,5 +1,17 @@
 import { setItem, getItem, todos } from './localStorage.js';
 
+// const todos = [
+//   { text: 'Buy milk', done: false,id :0 ,date: new Date(2019,9,1) ,dateComplet:new Date()},
+
+//   { text: 'Pick up Tom from airport', done: false,id:1,date: new Date(2019,4,1),dateComplet:new Date()},
+
+//   { text: 'Visit party', done: false ,id:2,date: new Date(2019,9,5),dateComplet:new Date()},
+
+//   { text: 'Visit doctor', done: true,id:3 ,date: new Date(2019,9,9),dateComplet:new Date()},
+
+//   { text: 'Buy meat', done: true ,id:4,date: new Date(2019,9,3),dateComplet:new Date()},
+// ];
+
 
 const listElem = document.querySelector('.list');
 const btnElem = document.querySelector('.btn');
@@ -7,89 +19,83 @@ const inputElem = document.querySelector('.task-input');
 
 
 const renderListItems = listItems => {
-    const listElem = document.querySelector('.list');
-
-    const listItemsElems = listItems
-        .sort((a, b) => b.date - a.date)
-        .sort((a, b) => a.done - b.done)
-        .sort((a, b) => b.dateСompleted - a.dateСompleted).map(({ text, done, id }) => {
-
-            const listItemElem = document.createElement('li');
-            listItemElem.classList.add('list__item');
-            listItemElem.setAttribute('id', `${id}`);
-
-            const checkboxItem = document.createElement('input');
-            checkboxItem.setAttribute('type', 'checkbox');
-            checkboxItem.checked = done;
-            if (done) {
-                listItemElem.classList.add('list__item_done');
-            }
-            checkboxItem.classList.add('list__item-checkbox');
+  const listElem = document.querySelector('.list');
 
 
-            listItemElem.append(checkboxItem, text);
+  const listItemsElems = listItems
+ 
+  .sort((a, b) => a.date - b.date)
+      .sort((a, b) => b.done - a.done)
+     .sort((a, b) => b.dateСompleted - a.dateСompleted)
+     .map(({ text, done,id }) => {
 
-            return listItemElem;
-        });
+      const listItemElem = document.createElement('li');
+      listItemElem.classList.add('list__item');
+      listItemElem.setAttribute('id',`${id}`);
 
-    listElem.innerHTML = '';
-    listElem.append(...listItemsElems);
+      const checkboxItem = document.createElement('input');
+      checkboxItem.setAttribute('type', 'checkbox')
+      checkboxItem.checked = done;
+      if (done) {
+          listItemElem.classList.add('list__item_done');
+      }
+      checkboxItem.classList.add('list__item-checkbox');
+
+
+      listItemElem.append(checkboxItem, text);
+
+      return listItemElem;
+  });
+
+  listElem.append(...listItemsElems);
+};
+
+renderListItems(todos);
+
+
+const checkDoneToDo= (event)=>{ 
+
+const checkTarget = event.target;
+if(checkTarget.tagName != 'INPUT') return;
+
+const getId  = todos.find(elem => elem.id === +checkTarget.parentElement.id);
+getId.done = checkTarget.checked;
+
+listElem.innerHTML ='';
+renderListItems(todos);
 
 };
 
+listElem.addEventListener('click',checkDoneToDo);
 
+const createNewToDo= () =>{
+if(inputElem.value =='') return;
+todos.unshift({
+  id: todos.length +1,
+  text: inputElem.value,
+  done:false,
 
-const checkDoneWork = (event) => {
-    const checkTarget = event.target;
-    if (checkTarget.tagName != 'INPUT') return;
+});
 
-    const getTasks = getItem('todos');
+inputElem.value='';
+listElem.innerHTML='';
+renderListItems(todos);
 
-    const getId = getTasks.find(elem => elem.id === +checkTarget.parentElement.id);
-    getId.done = checkTarget.checked;
-    getId.dateСompleted = getId.done ? new Date() : undefined;
-
-    setItem('todos', getTasks);
-    renderListItems(getItem('todos'));
 };
 
-listElem.addEventListener('click', checkDoneWork);
+btnElem.addEventListener('click',createNewToDo);
 
 
-const creatNewWork = () => {
-    if (inputElem.value == '') return;
-    const pushTask = getItem('todos');
+document.addEventListener('DOMContentLoaded',()=>{
+    listItemElem();
 
-    pushTask.push({
-        id: todos.length + 1,
-        text: inputElem.value,
-        done: false,
-        date: new Date(),
-        dateCompleted: undefined,
-    });
+    createNewToDo();
 
-    inputElem.value = '';
-
-    setItem('todos', pushTask);
-    renderListItems(getItem('todos'));
-};
-
-btnElem.addEventListener('click', creatNewWork);
-
-const onDocumentLoaded = () => {
-    renderListItems(getItem('todos'));
-}
-
-document.addEventListener('DOMContentLoaded', onDocumentLoaded);
-
-const onStorageChange = event => {
-    if (event.key !== 'todos') {
-        return;
+});
+const onStorageChange= e =>{
+    if(e.key ==='taskList'){
+        listItemElem();
     }
-    listElem.innerHTML = '';
-    renderListItems(getItem('todos'));
 };
 
-
-
-window.addEventListener('storage', onStorageChange);
+window.addEventListener('storage',onStorageChange);
