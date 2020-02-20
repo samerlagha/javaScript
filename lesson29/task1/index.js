@@ -14,7 +14,7 @@ export const  addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
-const imgSrc='https://images.unsplash.com/photo-1455577380025-4321f1e1dca7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80';
+const imgSrc='https://pngimg.com/uploads/mario/mario_PNG125.png';
 
 const  onImageLoaded = (error, data)=> {
     if (error) {
@@ -27,5 +27,22 @@ const  onImageLoaded = (error, data)=> {
 };
 
 
-addImage(imgSrc ,onImageLoaded);
+// addImage(imgSrc ,onImageLoaded);
 
+
+// export const addImage = (imgSrc,callback) => {
+//     const imgElem = document.createElement('img');
+//     imgElem.setAttribute('alt','My Photo');
+//     imgElem.src = imgSrc;
+//     const containerElem = document.querySelector('.page');
+//     containerElem.append(imgElem);
+
+//     const onImageLoaded = () => {
+//         const {width, height} = imgElem;
+//         callback(null, {width, height});
+//     };
+
+//     imgElem.addEventListener('load', onImageLoaded);
+
+//     imgElem.addEventListener('error', () => callback('Image load failed'));
+// };
