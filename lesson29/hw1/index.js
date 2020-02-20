@@ -1,18 +1,18 @@
-const requestUserData = (userId, callback) => {
-    if (userId == 'broken') {
-        callback(null, 'Failed to load user data');
-        return;
-    }
-    let object = {
-        name: 'John',
-        age: 17,
-        userId,
-        email: 'userid777@example.com'
+export const requestUserData = (userId, callback) => {
+
+
+    const onLoadUserData = () => {
+        if (userId == 'broken') {
+            callback(null, 'Failed to load user data');
+            return;
+        }
+        callback({
+            name: 'John',
+            age: 17,
+            userId,
+            email: `${userId}@example.com`,
+        });
     };
+    setTimeout(onLoadUserData, Math.floor(Math.random() * 3 + 1) * 1000);
 
-    callback = (object);
-    setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
-}
-
-
-export { requestUserData };
+};
