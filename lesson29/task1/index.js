@@ -14,6 +14,8 @@ export const  addImage = (imgSrc, callback) => {
     imgElem.addEventListener('error', () => callback('Image load failed'));
 };
 
+const imgSrc='https://images.unsplash.com/photo-1455577380025-4321f1e1dca7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80';
+
 const  onImageLoaded = (error, data)=> {
     if (error) {
         console.log(error);
@@ -23,7 +25,7 @@ const  onImageLoaded = (error, data)=> {
     const sizeElem = document.querySelector('.image-size');
     sizeElem.textContent = `${width} x ${height}`;
 };
-const imgSrc='https://images.unsplash.com/photo-1455577380025-4321f1e1dca7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80';
+
 
 addImage(imgSrc ,onImageLoaded);
-;
+
