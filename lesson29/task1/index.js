@@ -27,5 +27,5 @@ const  onImageLoaded = (error, data)=> {
 };
 
 
-addImage(imgSrc ,onImageLoaded);
+// addImage(imgSrc ,onImageLoaded);
 
