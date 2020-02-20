@@ -14,6 +14,5 @@ const requestUserData = (userId, callback) => {
     setTimeout(callback, Math.floor(Math.random() * 3 + 1) * 1000);
 }
 
-requestUserData('broken');
 
 export { requestUserData };
