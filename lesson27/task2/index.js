@@ -1,5 +1,8 @@
 const counterElem = document.querySelector('.counter');
+
 const counterValueElem = document.querySelector('.counter__value');
+
+
 
 const  onCounterChange = e => {
     isbutton = e.target.classList.contains('counter__button');
@@ -8,6 +11,7 @@ const  onCounterChange = e => {
 
     const action = e.target.dataset.action;
     const oldVelue = Number(counterValueElem.textContent);
+   
     
     const newValue = action === 'decrease'
         ? oldVelue -1
@@ -20,14 +24,14 @@ const  onCounterChange = e => {
 
 counterElem.addEventListener('click', onCounterChange);
 
-
+//get the same info in pages
 const onStorageChange = e =>{
   counterValueElem.textContent = e.newValue;
 }
 
 window.addEventListener('storage',onStorageChange);
 
-
+// save info after roalded page
 const  onDocumentLoaded = ()=> {
     counterValueElem.textContent = localStorage.getItem('counterValue') || 0;
 };
