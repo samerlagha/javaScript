@@ -1,7 +1,5 @@
 import { addImage } from './addImage.js';
 
-import {addImage} from './addImage';
-
  export const addImageV2 = url =>{
     return new Promise((resolve,reject) =>{
 
