@@ -27,5 +27,5 @@ const requestUserData = userId =>{
 
 requestUserData('broken-1')
 .then(data=>console.log(data) , error => console.log(error))
-  //.catch(error => console.log(error))
+
   .finally(() =>console.log('finally'));
