@@ -5,7 +5,7 @@ export const requestUserData = userId =>{
         if(userId ==='broken'){
             setTimeout(()=>{
                 reject(new Error('User not found'));
-            },500)
+            },500);
           
         } else {
             setTimeout(()=>{
@@ -13,7 +13,7 @@ export const requestUserData = userId =>{
               resolve({
                   name:'Jhon',
                   age:17,
-                  email:`${userId}`,
+                  email:`${userId}` +'@example.com',
                   userId,
               });
             },1000);
@@ -25,7 +25,9 @@ export const requestUserData = userId =>{
 };
 
 
-requestUserData('broken-1')
-.then(data=>console.log(data) , error => console.log(error))
+requestUserData('userid777')
+  .then(data=>console.log(data))
+  
+  .catch(error => console.log(error))
 
   .finally(() =>console.log('finally'));
