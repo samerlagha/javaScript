@@ -1,5 +1,6 @@
 const baseUrl = 'https://crudcrud.com/api/5d4859d709214ce19d87ba7c4e0bac37/tasks';
 
+
 const mapTasks = tasks =>
     tasks.map(({ _id, ...rest }) => ({...rest, id: _id }))
 
@@ -38,4 +39,3 @@ export const deleteTask = taskId => {
     })
 
 };
-

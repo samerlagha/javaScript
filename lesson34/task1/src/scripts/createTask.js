@@ -18,7 +18,7 @@ export const onCreateTask = () => {
         text,
         done: false,
         createDate: new Date().toISOString(),
-        id: Math.random().toString(),
+        // id: Math.random().toString(),
     };
 
     createTask(newTask)

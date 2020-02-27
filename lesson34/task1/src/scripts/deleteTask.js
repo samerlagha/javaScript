@@ -1,25 +1,20 @@
-import {initTodoListHandlers} from './todoList.js';
-import {renderTasks} from './renderer.js';
-import {getTasksList} from './tasksGateway.js';
-import {setItem} from './storage.js';
-// import {onDeleteTask} from './deleteTask.js';
+import { setItem } from './storage.js';
+import { renderTasks } from './renderer.js';
+import { getTasksList, deleteTask } from './tasksGateway.js';
 
+function onDeleteTask(event) {
+    const deleteBtn = event.target.classList.contains('list-item__delete-btn');
+    if (!deleteBtn) return;
 
-document.addEventListener('DOMContentLoaded', () => {
-    getTasksList()
-        .then(tasksList => {
-                setItem('tasksList', tasksList)
+    const taskId = event.target.parentNode.firstElementChild.dataset.id;
+
+    deleteTask(taskId)
+        .then(() => getTasksList())
+        .then(newTasksList => {
+            setItem('tasksList', newTasksList)
             renderTasks();
-        })
-    initTodoListHandlers();
-});
-
-
-const onStorageChange = e => {
-    if (e.key === 'tasksList') {
-            renderTasks();
-    }
+        });
 };
 
-window.addEventListener('storage', onStorageChange);
+export { onDeleteTask }
  
