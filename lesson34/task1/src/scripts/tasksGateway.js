@@ -10,7 +10,7 @@ export const getTasksList = () => {
         .then(tasks => mapTasks(tasks))
 };
 
-export const creatTask = taskData => {
+export const createTask = taskData => {
     return fetch(baseUrl, {
         method: 'POST',
         headers: {
