@@ -1,5 +1,5 @@
 import { setItem } from './storage.js';
-import { renderTasks } from './renderer.js';
+import { renderTasks } from './render.js';
 import { getTasksList, deleteTask } from './tasksGateway.js';
 
 function onDeleteTask(event) {

@@ -1,4 +1,4 @@
-import {renderTasks} from './renderer.js';
+import {renderTasks} from './render.js';
 import {getItem, setItem} from './storage.js';
 import { createTask, getTasksList } from './tasksGateway.js';
 
