@@ -2,6 +2,7 @@ import {initTodoListHandlers} from './todoList.js';
 import {renderTasks} from './render.js';
 import {getTasksList} from './tasksGateway.js';
 import {setItem} from './storage.js';
+// import {onToggleTask } from './update.js';
 
 
 
