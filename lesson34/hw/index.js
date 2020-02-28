@@ -1,4 +1,4 @@
-const baseUrl = 'https://crudcrud.com/api/5d4859d709214ce19d87ba7c4e0bac37/tasks';
+const baseUrl = 'https://crudcrud.com/api/5d4859d709214ce19d87ba7c4e0bac37/event';
 
 const formElem = document.querySelector('.login-form');
 const submitBtnElem = document.querySelector('.submit-button');
