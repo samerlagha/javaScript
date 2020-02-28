@@ -1,6 +1,6 @@
 import {renderTasks} from './render.js';
 import {getItem, setItem} from './storage.js';
-import { createTask, getTasksList } from './tasksGateway.js';
+import { createTask , getTasksList } from './tasksGateway.js';
 
 
 export const onCreateTask = () => {
