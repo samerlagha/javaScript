@@ -1,4 +1,4 @@
-export const parseUser = data => {
+  export const parseUser = data => {
     try {
         const result = JSON.parse(data);
         return result;
