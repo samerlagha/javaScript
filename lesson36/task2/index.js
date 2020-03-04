@@ -24,8 +24,8 @@ const onSearchUser = async () => {
     const userName = userNameInputeElem.value;
     //cdelam zapros
     try{
-        const userDate = await fetchUserData(userName);
-        renderUserData(userDate);
+        const userData = await fetchUserData(userName);
+        renderUserData(userData);
        const repos= await fetchRepositories(userData.repos_url);
        renderRepos(reposList);
     } catch(err){
