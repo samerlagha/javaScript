@@ -1,4 +1,4 @@
-const getUser =  async userId =>{
+export const fetchUser  =  async userId =>{
     //proverka erro fo async
     try{
 
