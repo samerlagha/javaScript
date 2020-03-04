@@ -1,24 +1,17 @@
-export const fetchUser  =  async userId =>{
-    //proverka erro fo async
-    try{
-
-           //zapros data dla polutshenie data from server
-        const response =  await fetch(`https://api.github.com/users/${userId}`);
-        //proverka 
-          if(!response.ok){
-              return null;
-          }
-           //esli user find
-    const userDate = await response.json() ;
-    return userDate;
-
-    } catch(err){
+export const fetchUser = async userId => {
+    try {
+        const response = await fetch (`https://api.github.com/users/${userId}`); 
+        if(!response.ok){ 
+            return null; 
+        } 
+         
+        const userData = await response.json();
+        return userData;
+    } catch (err) {
         throw new Error('Failed to fetch user');
     }
+    };
 
-  
-};
-
-getUser('facebook')
-.then(userDate =>console.log(userDate))
-   .catch(err=>alert(err.message));
+fetchUser('facebook') 
+    .then(userData => console.log(userData))
+    .catch(err => alert(err.message));
